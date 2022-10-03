@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"strconv"
 )
 
 func main() {
@@ -14,7 +15,7 @@ func main() {
 	fmt.Println(b)
 
 	var num int = 65
-	var d string = string(rune(num))
+	var d string = strconv.Itoa(num) //string(rune(num))
 	fmt.Println(d)
 	fmt.Printf("%v, %T\n", d, d)
 }
