@@ -50,4 +50,8 @@ func main() {
 	fmt.Println()
 	d := 2.5
 	fmt.Printf("%v, %T\n", d, d)
+
+	// e := int64(d)
+	var e int64 = int64(d)
+	fmt.Printf("%v, %T\n", e, e)
 }
