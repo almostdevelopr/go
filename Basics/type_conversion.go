@@ -1,6 +1,8 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+)
 
 func main() {
 	/*
@@ -10,4 +12,9 @@ func main() {
 	var a int32 = 100
 	var b int64 = int64(a)
 	fmt.Println(b)
+
+	var num int = 65
+	var d string = string(rune(num))
+	fmt.Println(d)
+	fmt.Printf("%v, %T\n", d, d)
 }
