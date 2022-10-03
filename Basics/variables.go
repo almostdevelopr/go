@@ -47,4 +47,7 @@ func main() {
 	fmt.Println("New Balance:", Balance)
 
 	fmt.Printf("Value of Balance: %v, Type of Balance: %T", Balance, Balance)
+	fmt.Println()
+	d := 2.5
+	fmt.Printf("%v, %T\n", d, d)
 }
