@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"math/rand"
 	"strconv"
 )
 
@@ -18,4 +19,6 @@ func main() {
 	var d string = strconv.Itoa(num) //string(rune(num))
 	fmt.Println(d)
 	fmt.Printf("%v, %T\n", d, d)
+
+	fmt.Println("My favourite number:", rand.Intn(10))
 }
