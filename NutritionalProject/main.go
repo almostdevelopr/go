@@ -5,15 +5,15 @@ import "fmt"
 // entry point
 func main() {
 	ns := GetNutritionalScore(NutritionalData{
-		Energy:              EnergyFromKcal(),
-		Sugars:              SugarGram(),
-		SaturatedFattyAcids: SaturatedFattyAcids(),
-		Sodium:              SodiumMilligram(),
-		Fruits:              FruitsPercent(),
-		Fibre:               FibreGram(),
-		Protein:             ProteinGram(),
+		Energy:              EnergyFromKcal(500),
+		Sugars:              SugarGram(10),
+		SaturatedFattyAcids: SaturatedFattyAcids(2),
+		Sodium:              SodiumMilligram(500),
+		Fruits:              FruitsPercent(60),
+		Fibre:               FibreGram(4),
+		Protein:             ProteinGram(2),
 	}, Food)
 
-	fmt.Printf("Nutrictional Score:%d", ns.Value)
-	fmt.Printf("NutriScore: %s\n", ns.GetNutriScore())
+	fmt.Printf("Nutrictional Score: %d\n", ns.Value)
+	fmt.Printf("Nutrictional Score Grade: %s\n", ns.GetNutriScore())
 }
