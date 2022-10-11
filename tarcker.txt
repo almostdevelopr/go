@@ -1,0 +1,10 @@
+Nutritional Calculator
+    Topics covered :
+        1. Slices
+        2. if else
+        3. Logical Operators
+        4. Floats and calculations
+        5. Struct
+        6. Struct Methods
+        7. Loops/ range
+        8. Functions
