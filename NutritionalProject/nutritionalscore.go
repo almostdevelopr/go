@@ -46,28 +46,37 @@ var energyLevelsBeverage = []float64{270, 240, 210, 180, 150, 120, 90, 60, 30, 0
 var sugarLevelsBeverage = []float64{13.5, 12, 10.5, 9, 7.5, 6, 4.5, 3, 1.5, 0}
 
 func (e EnergyKJ) GetPoints(st ScoreType) int {
-
+	if st == Beverage {
+		return getPointsFromRange(float64(e), energyLevelsBeverage)
+	}
+	return getPointsFromRange(float64(e), energyLevels)
 }
 
 func (s SugarGram) GetPoints(st ScoreType) int {
-
+	if st == Beverage {
+		return getPointsFromRange(float64(s), sugarLevelsBeverage)
+	}
+	return getPointsFromRange(float64(s), sugarLevels)
 }
 
 func (sfa SaturatedFattyAcids) GetPoints(st ScoreType) int {
-
+	return getPointsFromRange(float64(sfa), saturatedFattyAcidsLevels)
 }
+
 func (s SodiumMilligram) GetPoints(st ScoreType) int {
-
+	return getPointsFromRange(float64(s), sodiumLevels)
 }
+
 func (f FruitsPercent) GetPoints(st ScoreType) int {
 
 }
-func (f FibreGram) GetPoints(st ScoreType) int {
 
+func (f FibreGram) GetPoints(st ScoreType) int {
+	return getPointsFromRange(float64(f), fibreLevels)
 }
 
 func (p ProteinGram) GetPoints(st ScoreType) int {
-
+	return getPointsFromRange(float64(p), proteinLevels)
 }
 
 func EnergyFromKcal(kcal float64) EnergyKJ {
