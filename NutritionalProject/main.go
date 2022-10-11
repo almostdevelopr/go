@@ -14,5 +14,6 @@ func main() {
 		Protein:             ProteinGram(),
 	}, Food)
 
-	fmt.Printf("Nutrictional Score:%d", ns.value)
+	fmt.Printf("Nutrictional Score:%d", ns.Value)
+	fmt.Printf("NutriScore: %s\n", ns.GetNutriScore())
 }

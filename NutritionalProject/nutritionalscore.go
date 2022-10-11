@@ -68,7 +68,24 @@ func (s SodiumMilligram) GetPoints(st ScoreType) int {
 }
 
 func (f FruitsPercent) GetPoints(st ScoreType) int {
-
+	if st == Beverage {
+		if f > 80 {
+			return 80
+		} else if f > 60 {
+			return 4
+		} else if f > 40 {
+			return 2
+		}
+		return 0
+	}
+	if f > 80 {
+		return 5
+	} else if f > 60 {
+		return 2
+	} else if f > 40 {
+		return 1
+	}
+	return 0
 }
 
 func (f FibreGram) GetPoints(st ScoreType) int {
@@ -105,6 +122,10 @@ func GetNutritionalScore(n NutritionalData, st ScoreType) NutritionalScore {
 		Negative:  negative,
 		ScoreType: st,
 	}
+}
+
+func (ns NutritionalScore) GetNutriScore() string {
+
 }
 
 func getPointsFromRange(v float64, steps []float64) int {
